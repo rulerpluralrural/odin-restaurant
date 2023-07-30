@@ -368,6 +368,7 @@ header .logo-container {
 @media only screen and (max-width: 900px) {
     .menu-container {
         width: 100vw;
+        padding: 2rem;
         grid-template-columns: 1fr;
         gap: 1rem;
     }
