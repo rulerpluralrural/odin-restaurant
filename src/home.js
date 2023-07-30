@@ -3,6 +3,7 @@ import frontPageImage from './assets/front-pg-img.jpg';
 import imageOne from './assets/Burger.jpg';
 import imageTwo from './assets/Salad.jpg';
 import imageThree from './assets/Porkchop.jpg';
+import createMenu from './menu';
 
 const createHome = () => {
     const content = document.getElementById('main-content')
@@ -18,17 +19,23 @@ const createHome = () => {
     //left hero section
     const leftContainer = document.createElement('div')
     leftContainer.classList.add('left-container')
+
     const introHeader = document.createElement('h1')
     introHeader.textContent = 'Try Something Good '
+
     const introText = document.createElement('small')
     introText.textContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor'
+
     const iconSpan = document.createElement('span')
     const introIcon = document.createElement('i')
     introIcon.classList.add('fa-solid')
     introIcon.classList.add('fa-burger')
+
     introHeader.appendChild(iconSpan)
     iconSpan.appendChild(introIcon)
+    
     const viewMenu = document.createElement('button')
+    viewMenu.id = 'view-menu'
     viewMenu.textContent = 'View our Menu'
 
     leftContainer.appendChild(introHeader)
@@ -55,18 +62,21 @@ const createHome = () => {
     bottomContainer.id = ('bottom-container')
 
     const imgContainerOne = document.createElement('div')
+    imgContainerOne.classList.add('product-btn')
     const imgOneText = document.createElement('a')
     imgOneText.textContent = 'Our Best Seller Burger $69'
     imgContainerOne.classList.add('img-container')
     imgContainerOne.classList.add('img-container-one')
 
     const imgContainerTwo = document.createElement('div')
+    imgContainerTwo.classList.add('product-btn')
     const imgTwoText = document.createElement('a')
     imgTwoText.textContent = 'Our Best Seller Salad $69'
     imgContainerTwo.classList.add('img-container')
     imgContainerTwo.classList.add('img-container-two')
 
     const imgContainerThree = document.createElement('div')
+    imgContainerThree.classList.add('product-btn')
     const imgThreeText = document.createElement('a')
     imgThreeText.textContent = 'Our Best Seller Porkchop $69'
     imgContainerThree.classList.add('img-container')
@@ -92,6 +102,21 @@ const createHome = () => {
     home.appendChild(hero)
     home.appendChild(bottomContainer)
     content.appendChild(home)
+
+    // home view menu button event listener 
+    const viewBtn = document.getElementById('view-menu')
+    viewBtn.addEventListener('click', () => {
+        content.innerHTML = ''
+        createMenu()
+    })
+
+    const productBtn = document.querySelectorAll('.product-btn')
+    productBtn.forEach(button => button.addEventListener('click', () => {
+        content.innerHTML = ''
+        createMenu()
+    }))
+
+    return content.appendChild(home)
 }
 
 export default createHome

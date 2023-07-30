@@ -50,17 +50,79 @@ const createMenu = () => {
     veggie.src = ImageSix
 
     burgerAnchor.appendChild(burger)
-    burgerAnchor.innerHTML += '<div class=\'text-container\'></div><p>Burger</p><p>$69</p></div>';
     meatballsAnchor.appendChild(meatballs)
-    meatballsAnchor.innerHTML += '<div class=\'text-container\'></div><p>Beach Meatballs</p><p>$69</p></div>';
     pancakeAnchor.appendChild(pancake)
-    pancakeAnchor.innerHTML +='<div class=\'text-container\'></div><p>Pancake</p><p>$69</p></div>';
     porkchopAnchor.appendChild(porkchop)
-    porkchopAnchor.innerHTML += '<div class=\'text-container\'></div><p>Best Porkchop</p><p>$69</p></div>';
     saladAnchor.appendChild(salad)
-    saladAnchor.innerHTML += '<div class=\'text-container\'></div><p>Some Salad</p><p>$69</p></div>';
     veggieAnchor.appendChild(veggie)
-    veggieAnchor.innerHTML += '<div class=\'text-container\'></div><p>Vegan Supreme</p><p>$69</p></div>';
+
+    const burgerTextContainer = document.createElement('div')
+    burgerTextContainer.classList.add('text-container')
+    const burgerName = document.createElement('p')
+    burgerName.textContent = 'Burger'
+    const burgerPrice = document.createElement('p')
+    burgerPrice.textContent = '$69'
+    burgerTextContainer.appendChild(burgerName)
+    burgerTextContainer.appendChild(burgerPrice)
+
+    const meatballsTextContainer = document.createElement('div')
+    meatballsTextContainer.classList.add('text-container')
+    const meatballsName = document.createElement('p')
+    meatballsName.textContent = 'Meatballs'
+    const meatballsPrice = document.createElement('p')
+    meatballsPrice.textContent = '$69'
+    meatballsTextContainer.appendChild(meatballsName)
+    meatballsTextContainer.appendChild(meatballsPrice)
+
+    const pancakeTextContainer = document.createElement('div')
+    pancakeTextContainer.classList.add('text-container')
+    const pancakeName = document.createElement('p')
+    pancakeName.textContent = 'Pancake'
+    const pancakePrice = document.createElement('p')
+    pancakePrice.textContent = '$69'
+    pancakeTextContainer.appendChild(pancakeName)
+    pancakeTextContainer.appendChild(pancakePrice)
+
+    const porkchopTextContainer = document.createElement('div')
+    porkchopTextContainer.classList.add('text-container')
+    const porkchopName = document.createElement('p')
+    porkchopName.textContent = 'Porkchop'
+    const porkchopPrice = document.createElement('p')
+    porkchopPrice.textContent = '$69'
+    porkchopTextContainer.appendChild(porkchopName)
+    porkchopTextContainer.appendChild(porkchopPrice)
+
+    const saladTextContainer = document.createElement('div')
+    saladTextContainer.classList.add('text-container')
+    const saladName = document.createElement('p')
+    saladName.textContent = 'Salad'
+    const saladPrice = document.createElement('p')
+    saladPrice.textContent = '$69'
+    saladTextContainer.appendChild(saladName)
+    saladTextContainer.appendChild(saladPrice)
+
+    const veggieTextContainer = document.createElement('div')
+    veggieTextContainer.classList.add('text-container')
+    const veggieName = document.createElement('p')
+    veggieName.textContent = 'Veggie'
+    const veggiePrice = document.createElement('p')
+    veggiePrice.textContent = '$69'
+    veggieTextContainer.appendChild(veggieName)
+    veggieTextContainer.appendChild(veggiePrice)
+
+    burgerAnchor.appendChild(burgerTextContainer)
+    meatballsAnchor.appendChild(meatballsTextContainer)
+    pancakeAnchor.appendChild(pancakeTextContainer)
+    porkchopAnchor.appendChild(porkchopTextContainer)
+    saladAnchor.appendChild(saladTextContainer)
+    veggieAnchor.appendChild(veggieTextContainer)
+
+    // burgerAnchor.innerHTML = `<img src='./assets/Burger.jpg' alt='burger'><div class='text-container'><p>Burger</p><p>$69</p></div>`
+    // meatballsAnchor.innerHTML = `<div class='text-container'><p>Beach Meatballs</p><p>$69</p></div>`
+    // pancakeAnchor.innerHTML = `<div class='text-container'><p>Pancake</p><p>$69</p></div>`
+    // porkchopAnchor.innerHTML = `<div class='text-container'><p>Best Porkchop</p><p>$69</p></div>`
+    // saladAnchor.innerHTML = `<div class='text-container'><p>Some Salad</p><p>$69</p></div>`
+    // veggieAnchor.innerHTML = `<div class='text-container'><p>Vegan Supreme</p><p>$69</p></div>`
 
     menu.appendChild(burgerAnchor)
     menu.appendChild(meatballsAnchor)
